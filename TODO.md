@@ -1,0 +1,4 @@
+- [x] Update MarketplacePage to manage filter state (searchQuery, minPrice, maxPrice)
+- [x] Modify SearchBar to include price range inputs and use props for state and callback
+- [x] Update ProductGrid to accept filter props and implement filtering logic
+- [x] Test the filtering functionality
