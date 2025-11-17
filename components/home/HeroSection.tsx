@@ -28,7 +28,7 @@ export const HeroSection = () => {
             manualMode={false}
             blurAmount={5}
             borderColor="purple"
-            animationDuration={2}
+            animationDuration={1}
             pauseBetweenAnimations={1}
           />
 
