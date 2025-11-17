@@ -18,7 +18,7 @@ export const Navbar = () => {
 
   return (
     <motion.nav 
-      className="fixed top-0 left-0 right-0 z-50 bg-purple-200/80 backdrop-blur-sm shadow-md"
+      className="fixed top-0 left-0 right-0 z-50 bg-purple-200/80 backdrop-blur-sm shadow-md antialiased font-sans"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
@@ -41,17 +41,31 @@ export const Navbar = () => {
             {menuItems.map((item, index) => {
               const isActive = pathname === item.href;
               return (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className={`font-medium transition-colors ${
-                    isActive
-                      ? 'text-purple-600 border-b-2 border-purple-600'
-                      : 'text-gray-800 hover:text-gray-600'
-                  }`}
-                >
-                  {item.label}
-                </Link>
+                <div key={index} className="relative inline-flex items-center">
+                  <Link
+                    href={item.href}
+                    className={`relative z-10 px-3 py-1.5 text-base font-semibold tracking-wide transition-colors duration-200 ${
+                      isActive ? 'text-white' : 'text-gray-800 hover:text-purple-700'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                  {/* animated background for active / subtle hover glow */}
+                  {isActive ? (
+                    <motion.span
+                      layoutId="nav-active-bg"
+                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                      className="absolute inset-0 rounded-full bg-linear-to-r from-purple-500 to-purple-600 shadow-md -z-10"
+                    />
+                  ) : (
+                    <motion.span
+                      initial={{ opacity: 0 }}
+                      whileHover={{ opacity: 1, scale: 1.02 }}
+                      transition={{ duration: 0.16 }}
+                      className="absolute inset-0 rounded-full bg-white/0 hover:bg-white/6 -z-10"
+                    />
+                  )}
+                </div>
               );
             })}
           </div>

@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
 import TrueFocus from "@/components/anim/TrueFocus";
-import TextType from "@/components/anim/TextType";
+import RotatingText from "@/components/anim/RotatingText";
 
 export const HeroSection = () => {
   return (
-    <div className="relative h-[500px] flex items-center justify-center overflow-hidden" style={{ width: '100%', height: '600px', position: 'relative' }}>
+    <div
+      className="relative h-[500px] flex items-center justify-center overflow-hidden"
+      style={{ width: "100%", height: "600px", position: "relative" }}
+    >
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -30,25 +32,26 @@ export const HeroSection = () => {
             pauseBetweenAnimations={1}
           />
 
-          {/* Animated typed lines (purple) */}
+          {/* Animated rotating lines (purple, per spec) */}
           <div className="mt-4 flex items-center justify-center gap-4">
             {/* static white word */}
             <span className="text-white text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-md">
               Transaksi
             </span>
 
-            {/* typed text with subtle shadow */}
+            {/* RotatingText replacing TextType */}
             <span className="inline-flex items-center">
-              <TextType
-                text={["Barang Bekas", "Produk Usaha", "Aman antar mahasiswa"]}
-                typingSpeed={70}
-                deletingSpeed={40}
-                pauseDuration={1800}
-                loop
-                showCursor
-                cursorCharacter="|"
-                textColors={["white"]}
-                className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#7C3AED] drop-shadow-xl"
+              <RotatingText
+                texts={["Barang Bekas", "Produk Usaha", "Aman antar mahasiswa"]}
+                mainClassName="px-3 sm:px-4 md:px-5 bg-[#7C3AED] text-white font-extrabold text-lg md:text-xl lg:text-2xl overflow-hidden py-1 sm:py-1.5 md:py-2 justify-center rounded-lg"
+                staggerFrom={"last"}
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                exit={{ y: "-120%" }}
+                staggerDuration={0.025}
+                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                rotationInterval={2000}
               />
             </span>
           </div>

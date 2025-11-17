@@ -7,7 +7,6 @@ import { products } from "@/lib/dummy-data";
 import { ProductCard } from "@/components/home/ProductCard";
 
 export const FavoritContent: React.FC = () => {
-  // ambil beberapa produk sebagai favorit (sesuaikan index jika perlu)
   const favoritProducts = products.slice(0, 12);
 
   return (
@@ -15,14 +14,17 @@ export const FavoritContent: React.FC = () => {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.3 }}
-      className="bg-transparent"
+      className="bg-transparent w-full"
     >
       <div className="w-full">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Favorit</h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        {/* full-width grid, 4 kolom di md+ */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
           {favoritProducts.map((product, index) => (
-            <ProductCard key={product.id} {...product} index={index} />
+            <div key={product.id} className="w-full">
+              <ProductCard {...product} index={index} />
+            </div>
           ))}
         </div>
       </div>
