@@ -86,8 +86,8 @@ export const AkunForm: React.FC = () => {
           <div className="md:col-span-1 flex flex-col items-center md:items-start gap-6">
             <div className="w-36 h-36 rounded-full bg-gray-100 flex items-center justify-center overflow-hidden border border-gray-100">
               <Image
-                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80"
-                alt="avatar placeholder"
+                src="https://images.unsplash.com/illustration-people-avatar?auto=format&fit=crop&w=400&q=80"
+                alt="avatar ilustrasi"
                 width={144}
                 height={144}
                 className="object-cover rounded-full"

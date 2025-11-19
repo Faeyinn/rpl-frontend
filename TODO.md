@@ -1,4 +1,12 @@
-- [x] Update MarketplacePage to manage filter state (searchQuery, minPrice, maxPrice)
-- [x] Modify SearchBar to include price range inputs and use props for state and callback
-- [x] Update ProductGrid to accept filter props and implement filtering logic
-- [x] Test the filtering functionality
+# TODO: Add Motion Animations to Landing Page
+
+## Tasks
+- [x] Update components/landing/DecorativeIcons.tsx: Add fade-in and floating animations to icons and circles
+- [x] Update components/landing/BackgroundPattern.tsx: Add subtle animations to gradients and grid
+- [x] Update components/landing/HelpButton.tsx: Add hover animations and enhance existing fade-in
+- [x] Test animations by running dev server and checking landing page
+
+## Notes
+- Use 'motion/react' for consistency with MainCard.tsx
+- Ensure animations are subtle and enhance UX without being distracting
+- Animations should start after page load with staggered delays

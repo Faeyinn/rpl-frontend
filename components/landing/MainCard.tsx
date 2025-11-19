@@ -42,14 +42,14 @@ export const MainCard = () => {
 
   return (
     <motion.div 
-      className="font-anton-regular bg-gray-200 rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl w-full mx-4"
+      className="bg-gray-200 rounded-3xl shadow-2xl p-8 md:p-12 max-w-2xl w-full mx-4"
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
     >
       <div className="text-center space-y-8">
         <motion.h1 
-          className="text-4xl md:text-5xl font-bold text-gray-900"
+          className="titan-one-regular text-4xl md:text-5xl font-bold text-gray-900"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
@@ -58,7 +58,7 @@ export const MainCard = () => {
         </motion.h1>
         
         <motion.p 
-          className="text-gray-700 text-lg md:text-xl leading-relaxed px-4"
+          className="font-semibold text-gray-700 text-lg md:text-xl leading-relaxed px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
@@ -76,14 +76,14 @@ export const MainCard = () => {
         >
           <button 
             onClick={handleGuestLogin}
-            className="bg-gray-800 hover:bg-gray-700 text-white font-medium px-8 py-4 rounded-xl transition-all w-full sm:w-auto min-w-[250px] shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+            className="font-semibold bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl transition-all w-full sm:w-auto min-w-[250px] shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
           >
             Log in as a guest
           </button>
           
           <Link href="/login">
             <button
-              className="bg-gray-800 hover:bg-gray-700 text-white font-medium px-8 py-4 rounded-xl transition-all w-full sm:w-auto min-w-[250px] shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
+              className="font-semibold bg-gray-800 hover:bg-gray-700 text-white px-8 py-4 rounded-xl transition-all w-full sm:w-auto min-w-[250px] shadow-lg hover:shadow-xl hover:scale-105 active:scale-95"
             >
               Log in
             </button>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Swal from 'sweetalert2';
 
 export const HelpButton = () => {
@@ -21,18 +21,21 @@ export const HelpButton = () => {
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="fixed top-6 right-6 z-50"
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.5 }}
     >
-      <button 
+      <motion.button
         onClick={handleHelp}
         className="bg-gray-800 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-gray-700 transition-colors"
+        whileHover={{ scale: 1.05, boxShadow: '0 10px 25px rgba(0,0,0,0.3)' }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ type: 'spring', stiffness: 300 }}
       >
         Bantuan
-      </button>
+      </motion.button>
     </motion.div>
   );
 };

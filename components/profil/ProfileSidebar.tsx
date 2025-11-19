@@ -13,8 +13,8 @@ export const ProfileSidebar: React.FC<ProfileSidebarProps> = ({
   onTabChange,
 }) => {
   const tabs = [
-    { id: "favorit", label: "Favorit" },
     { id: "akun", label: "Akun" },
+    { id: "favorit", label: "Favorit" },
     { id: "barang-saya", label: "Barang Saya" },
     { id: "tambah-barang", label: "Tambah Barang" },
   ];

@@ -11,62 +11,71 @@ export default function Footer() {
 
   const footerLinks = [
     {
-      topic: "Topic",
-      pages: ["Page", "Page", "Page"],
+      topic: "Marketplace",
+      pages: ["Jual Barang", "Kategori", "Promo"],
     },
     {
-      topic: "Topic",
-      pages: ["Page", "Page", "Page"],
+      topic: "Bantuan",
+      pages: ["FAQ", "Panduan Penjual", "Kontak"],
     },
     {
-      topic: "Topic",
-      pages: ["Page", "Page", "Page"],
+      topic: "Perusahaan",
+      pages: ["Tentang Kami", "Karir", "Kebijakan"],
     },
   ];
 
   return (
-    <footer className="w-full border-t border-gray-200 bg-white py-12">
-      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
-          {/* Kolom Kiri: Logo dan Sosial Media */}
-          <div className="md:col-span-4">
-            <h2 className="text-2xl font-bold text-gray-900">EduMart</h2>
-            <p className="mt-4 text-sm text-gray-600">
-              Tertarik jadi penjual?{" "}
-              <Link
-                href="/register-seller"
-                className="font-medium text-purple-700 hover:underline"
-              >
-                Gabung bersama kami.
-              </Link>
-            </p>
-            <div className="mt-6 flex space-x-4">
-              {socialLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-500 transition-colors hover:text-gray-800"
-                  aria-label={link.label}
-                >
-                  <link.icon className="h-6 w-6" />
-                </a>
-              ))}
+    <footer className="w-full border-t border-gray-100 bg-white text-gray-800">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+          {/* Left: logo + description + socials */}
+          <div className="md:col-span-4 space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center text-lg font-bold text-purple-700 shadow-sm">
+                EM
+              </div>
+              <div>
+                <h2 className="text-2xl font-semibold leading-snug text-gray-900">
+                  EduMart
+                </h2>
+                <p className="text-sm text-gray-600 mt-1">
+                  Marketplace kampus — jual & beli antar mahasiswa dengan mudah.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3">
+              {socialLinks.map((link) => {
+                const Icon = link.icon;
+                return (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={link.label}
+                    className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition transform hover:scale-105"
+                  >
+                    <Icon className="h-5 w-5 text-gray-700" />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
-          {/* Kolom Kanan: Links */}
-          <div className="grid grid-cols-2 gap-8 md:col-span-8 md:grid-cols-3">
+          {/* Right: link groups */}
+          <div className="md:col-span-8 grid grid-cols-2 sm:grid-cols-3 gap-6">
             {footerLinks.map((section, index) => (
               <div key={index}>
-                <h3 className="font-semibold text-gray-900">{section.topic}</h3>
-                <ul className="mt-4 space-y-2">
-                  {section.pages.map((page, pageIndex) => (
-                    <li key={pageIndex}>
+                <h3 className="font-semibold text-gray-900 mb-3">
+                  {section.topic}
+                </h3>
+                <ul className="space-y-2">
+                  {section.pages.map((page, i) => (
+                    <li key={i}>
                       <Link
                         href="#"
-                        className="text-sm text-gray-600 transition-colors hover:text-gray-900"
+                        className="text-sm text-gray-600 hover:text-gray-800 transition"
                       >
                         {page}
                       </Link>
@@ -77,8 +86,26 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div className="mt-8 border-t border-gray-200 pt-8 text-center text-sm text-gray-500">
-          © {new Date().getFullYear()} EduMart. All rights reserved.
+
+        <div className="mt-8 border-t border-gray-100 pt-6 flex flex-col md:flex-row items-center justify-between gap-3">
+          <div className="text-sm text-gray-500">
+            © {new Date().getFullYear()} EduMart. All rights reserved.
+          </div>
+          <div className="flex items-center gap-4 text-sm text-gray-500">
+            <Link
+              href="#"
+              className="hover:text-gray-800 transition"
+            >
+              Syarat & Ketentuan
+            </Link>
+            <span className="hidden sm:inline">•</span>
+            <Link
+              href="#"
+              className="hover:text-gray-800 transition"
+            >
+              Privasi
+            </Link>
+          </div>
         </div>
       </div>
     </footer>
