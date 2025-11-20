@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
 
@@ -32,11 +34,11 @@ export default function Footer() {
           <div className="md:col-span-4 space-y-6">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center text-lg font-bold text-purple-700 shadow-sm">
-                EM
+                AL
               </div>
               <div>
                 <h2 className="text-2xl font-semibold leading-snug text-gray-900">
-                  EduMart
+                  ANDALORA
                 </h2>
                 <p className="text-sm text-gray-600 mt-1">
                   Marketplace kampus — jual & beli antar mahasiswa dengan mudah.

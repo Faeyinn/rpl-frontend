@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export const Logo = () => {
   return (
-    <motion.div 
-      className="absolute top-6 left-6 z-10"
+    <motion.div
+      className="relative"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}

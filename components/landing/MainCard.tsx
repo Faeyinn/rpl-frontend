@@ -54,9 +54,18 @@ export const MainCard = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
         >
-          EduMarket
+          ANDALORA
         </motion.h1>
         
+        <motion.p 
+          className="font-semibold italic text-gray-700 text-lg md:text-xl leading-relaxed px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3 }}
+        >
+          Andalas Re-Owner Assets
+        </motion.p>
+
         <motion.p 
           className="font-semibold text-gray-700 text-lg md:text-xl leading-relaxed px-4"
           initial={{ opacity: 0, y: 20 }}

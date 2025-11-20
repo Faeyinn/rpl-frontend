@@ -19,11 +19,11 @@ export const FavoritContent: React.FC = () => {
       <div className="w-full">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6">Favorit</h2>
 
-        {/* full-width grid, 4 kolom di md+ */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
+        {/* full-width grid, 3 kolom di md+ */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 w-full">
           {favoritProducts.map((product, index) => (
             <div key={product.id} className="w-full">
-              <ProductCard {...product} index={index} />
+              <ProductCard {...product} index={index} hideCartButton />
             </div>
           ))}
         </div>

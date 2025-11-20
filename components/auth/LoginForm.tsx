@@ -145,10 +145,6 @@ export const LoginForm = () => {
             </Link>
           </p>
         </div>
-
-        <div className="mt-4 text-center text-sm text-gray-500">
-          <p>Demo: username: admin | password: admin123</p>
-        </div>
       </div>
     </motion.div>
   );

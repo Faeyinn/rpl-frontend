@@ -8,7 +8,7 @@ interface Member {
 }
 
 // Dummy Data
-const websiteUrl = "www.edumarket.com";
+const websiteUrl = "www.andalora.com";
 const description =
   "Dibuat sebagai tugas mata kuliah Organisasi Komputer II pada semester 5, Jurusan Teknik Komputer, Fakultas Teknologi Informasi, Universitas Andalas.";
 const year = "2025";
@@ -108,7 +108,7 @@ export function Footer() {
             {/* Timeline Card */}
             <div className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-gray-50 rounded-lg">
+                <div className="shrink-0 w-12 h-12 flex items-center justify-center bg-gray-50 rounded-lg">
                   <Calendar className="w-6 h-6 text-gray-700" />
                 </div>
                 <div className="flex-1">

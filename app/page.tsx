@@ -24,7 +24,9 @@ export default function LandingPage() {
       
       {/* Main content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen px-4 py-20">
-        <MainCard />
+        <div className="w-full flex items-center justify-center" style={{ minHeight: 'calc(100vh - 80px)' }}>
+          <MainCard />
+        </div>
       </div>
     </div>
   );

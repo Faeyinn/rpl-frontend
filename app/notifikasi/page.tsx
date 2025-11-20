@@ -13,22 +13,36 @@ const notifikasiData = [
     id: 1,
     title: "Toko Hanabi",
     description:
-      "Exquisite sophisticated iconic cutting-edge laborum deserunt esse bureaux cupidatat id minim. Sharp classic the best commodo nostrud delightful. Conversation aute wifey id. Qui sunt remarkable deserunt intricate airport excepteur classic esse riot girl.",
+      "Pesanan Anda telah berhasil dibuat. Silakan cek detail pesanan di halaman profil Anda.",
     category: "semua",
   },
   {
     id: 2,
     title: "Nana Shop",
     description:
-      "Exquisite sophisticated iconic cutting-edge laborum deserunt esse bureaux cupidatat id minim. Sharp classic the best commodo nostrud delightful. Conversation aute wifey id. Qui sunt remarkable deserunt intricate airport excepteur classic esse riot girl.",
+      "Pembayaran untuk pesanan Anda telah kami terima. Penjual akan segera memproses pesanan Anda.",
     category: "belum-dibaca",
   },
   {
     id: 3,
-    title: "Subheading",
+    title: "EduMart",
     description:
-      "Exquisite sophisticated iconic cutting-edge laborum deserunt esse bureaux cupidatat id minim. Sharp classic the best commodo nostrud delightful. Conversation aute wifey id. Qui sunt remarkable deserunt intricate airport excepteur classic esse riot girl.",
+      "Promo spesial hari ini! Dapatkan diskon hingga 30% untuk produk pilihan. Jangan lewatkan kesempatan ini!",
+    category: "semua",
+  },
+  {
+    id: 4,
+    title: "Toko Andalas",
+    description:
+      "Pesanan Anda telah dibatalkan sesuai permintaan. Jika ada pertanyaan, silakan hubungi penjual.",
     category: "spam",
+  },
+  {
+    id: 5,
+    title: "Nana Shop",
+    description:
+      "Penjual telah mengirimkan barang pesanan Anda. Cek resi pengiriman di detail pesanan.",
+    category: "belum-dibaca",
   },
 ];
 
@@ -58,7 +72,7 @@ export default function NotifikasiPage() {
         <FilterTabs activeTab={activeTab} onTabChange={setActiveTab} />
 
         {/* Notifikasi Cards */}
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredData.map((item) => (
             <NotifikasiCard
               key={item.id}

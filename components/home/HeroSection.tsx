@@ -86,7 +86,7 @@ export const HeroSection = () => {
         >
           <motion.div variants={textItem}>
             <TrueFocus
-              sentence="Edu Market"
+              sentence="ANDALORA"
               manualMode={false}
               blurAmount={0}
               borderColor="purple"
@@ -99,7 +99,7 @@ export const HeroSection = () => {
           <div className="mt-4 flex items-center justify-center gap-4">
             {/* static white word */}
             <motion.span
-              className="text-white text-xl md:text-2xl lg:text-3xl font-semibold drop-shadow-md"
+              className="text-gray-800 text-xl md:text-2xl lg:text-3xl font-extrabold drop-shadow-md"
               initial={{ y: 8, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.5, ease: EASE_OUT, delay: 0.12 }}
@@ -117,7 +117,7 @@ export const HeroSection = () => {
             >
               <RotatingText
                 texts={["Barang Bekas", "Produk Usaha", "Aman antar mahasiswa"]}
-                mainClassName="px-3 sm:px-4 md:px-5 bg-[#7C3AED] text-black font-extrabold text-lg md:text-xl lg:text-2xl overflow-hidden py-1 sm:py-1.5 md:py-2 justify-center rounded-lg shadow-md"
+                mainClassName="px-3 sm:px-4 md:px-5 bg-[#7C3AED] text-white font-extrabold text-lg md:text-xl lg:text-2xl overflow-hidden py-1 sm:py-1.5 md:py-2 justify-center rounded-lg shadow-md"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
