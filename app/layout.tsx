@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EduMarket",
+  title: "ANDALORA",
   description: "By Team 5 RPL",
 };
 
