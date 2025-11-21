@@ -44,7 +44,7 @@ export const Navbar = () => {
                     <motion.span
                       layoutId="nav-active-bg"
                       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                      className="absolute inset-0 rounded-full bg-gradient-to-r from-purple-500 to-purple-600 shadow-md -z-10"
+                      className="absolute inset-0 rounded-full bg-linear-to-r from-purple-500 to-purple-600 shadow-md -z-10"
                     />
                   ) : (
                     <motion.span
@@ -66,9 +66,9 @@ export const Navbar = () => {
           >
             <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {mobileOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" className="text-black" />
               ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" className="text-black" />
               )}
             </svg>
           </button>

@@ -27,10 +27,11 @@ export const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <div className="max-w-4xl mx-auto px-4 mt-8 relative z-20">
+    <div className="max-w-2xl mx-auto px-2 sm:px-4 mt-8 relative z-20">
       <div className="bg-white p-3 rounded-lg shadow-md border border-gray-200">
         <div className="flex flex-col gap-3">
-          <div className="flex gap-3">
+          {/* Search input + button in a row, always */}
+          <div className="flex items-center gap-2">
             <div className="flex-1 relative">
               <input
                 type="text"
@@ -38,18 +39,19 @@ export const SearchBar: React.FC<SearchBarProps> = ({
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
                 placeholder="Cari barang"
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-700"
+                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent text-gray-700 text-base"
               />
             </div>
             <button
               onClick={handleSearch}
-              className="px-8 py-3 bg-purple-400 hover:bg-purple-500 text-white rounded-lg transition-colors flex items-center gap-2 font-medium shadow-sm"
+              className="flex items-center justify-center bg-purple-400 hover:bg-purple-500 text-white rounded-lg transition-colors font-medium shadow-sm px-3 py-2 sm:px-5 sm:py-3"
+              style={{ minWidth: 44, minHeight: 44 }}
             >
-              <Search className="w-5 h-5" />
+              <Search className="w-5 h-5 sm:mr-2" />
               <span className="hidden sm:inline">Cari</span>
             </button>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
             <input
               type="number"
               value={minPrice}

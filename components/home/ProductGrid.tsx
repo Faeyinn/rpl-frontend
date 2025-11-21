@@ -30,9 +30,9 @@ export const ProductGrid: React.FC<ProductGridProps> = ({
   });
 
   return (
-    <div className="w-full px-4 py-12">
+    <div className="w-full px-2 sm:px-4 py-8 sm:py-12">
       <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">Belanja Apa Hari Ini?</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {filteredProducts.map((product, index) => (
           <ProductCard key={product.id} {...product} index={index} />
         ))}
